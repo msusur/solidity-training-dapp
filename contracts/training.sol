@@ -24,6 +24,11 @@ contract Training {
         _;
     }
 
+    modifier onlyActive() {
+        require(isActive);
+        _;
+    }
+
     function Training(uint256 _deposit, uint _studentLimit) public {
         owner = msg.sender;
         isActive = true;
@@ -41,9 +46,9 @@ contract Training {
         }
     }
 
-    /* Student Stuff */
+    /* Student Functions */
 
-    function registerToEvent(string email) payable public {
+    function registerToEvent(string email) payable onlyActive public {
         require(msg.value == deposit);
         require(!isRegistered(msg.sender));
         require(registeredUserCount < studentLimit);
@@ -66,7 +71,7 @@ contract Training {
 	    return participationUrl;
 	}
 
-	/* Admin Stuff */
+	/* Admin Functions */
 
 	function getStudent(uint idx) public constant onlyOwner returns (uint index, string email) {
 	    address studentAddr = studentsIndex[idx];
@@ -84,4 +89,7 @@ contract Training {
 	    participationUrl = url;
 	}
 
+	function closeParticipation() public onlyOwner {
+	    isActive = false;
+	}
 }
