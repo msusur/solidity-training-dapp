@@ -1,0 +1,144 @@
+.faq-item {
+  cursor: pointer;
+}
+.faq-detail p {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.faq-detail {
+  display: none;
+}
+
+.form {
+  width: 320px;
+  height: auto;
+  top: calc(50vh - 232px);
+  text-align: center;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  margin: auto;
+}
+
+.form .top {
+  text-align: center;
+  background-color: rgb(45, 48, 230);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  padding: 15px 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.form form {
+  margin: 0;
+  position: relative;
+  bottom: 10px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.form form input,
+.form form textarea {
+  display: block;
+  padding: 5px;
+  border: 1px solid #DDDBDB;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 3px;
+  letter-spacing: 1px
+}
+
+.form form textarea {
+  height: 110px;
+  resize: none;
+}
+
+.form form input[type="button"] {
+  width: 100px;
+  background-color: rgb(45, 48, 230);
+  margin: auto;
+  margin-bottom: 0;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  cursor: pointer
+}
+
+.input:focus,
+.input:hover {
+  -webkit-box-shadow: 0 0 8px #f55;
+  -moz-box-shadow: 0 0 8px #f55;
+  -ms-box-shadow: 0 0 8px #f55;
+  -o-box-shadow: 0 0 8px #f55;
+  box-shadow: 0 0 8px #f55;
+  border: none;
+  outline: none;
+}
+
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+.container-narrow>hr {
+  margin: 2rem 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.marketing {
+  margin: 3rem 0;
+}
+
+.marketing p+h4 {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .header {
+    margin-bottom: 2rem;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

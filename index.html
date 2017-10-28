@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/narrow-jumbotron.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <!-- <script src="https://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script> -->
+  <link href="css/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills float-right">
+          <li class="nav-item">
+            <a class="nav-link active" href="#prep">İletişim</a>
+          </li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">Ethereum'a Giriş Eğitimi</h3>
+    </div>
+
+    <div class="form">
+      <div class="top">
+        <i class="fa fa-cloud-upload fa-5x"></i>
+        <p>Kayıt Formu</p>
+      </div>
+      <form>
+        <input type="email" id="email" placeholder="adim@okulum.edu.tr" class="input" />
+        <input type="button" id="btn" value="Kayıt Ol" class="input" />
+      </form>
+    </div>
+
+    <div class="jumbotron">
+      <p class="lead">Soruların mı var? Şuraya bir göz at istersen.</p>
+      <ul class="list-group">
+        <li class="list-group-item faq-item" for="item1">Her kayıt olan eğitime katılabilecek mi?</li>
+        <div class="faq-detail" id="item1">
+          <p>Eğitime sadece üniversite öğrencileri katılabilecek. Dolayısıyla eğer üniversite öğrencisi olduğunuzu ispatlayamazsanız eğitime katılamayacaksınız.</p>
+        </div>
+        <li class="list-group-item faq-item" for="item2">Kayıt formu çalışmıyor ne yapmalıyım?</li>
+        <div class="faq-detail" id="item2">
+          <p>Eğitime katılım sırasında bir ön eleme yöntemi belirlemek istedik, böylece sadece 'gerçekten' hevesli ve ilgili kişileri eğitime dahil edebileceğiz. Ancak üzülmeyin, formu çalıştırabilmeniz için gerekli adımları
+            <a href="https://github.com/msusur/solidity-training-contract">github repository</a>'mizde anlattık. Dolayısıyla ne yapacağınızı oradan okuyabilirsiniz.
+          </p>
+        </div>
+        <li class="list-group-item faq-item" for="item8">Neden böyle garip işlerle uğraştırıyorsunuz bizi?</li>
+        <div class="faq-detail" id="item8">
+          <p>Çünkü her gün bize 'paramı ethereum'a mı yatırayım yoksa bitcoin'e mi yatırayım?' diye eposta gönderen kişilerden bıktık. Bu yüzden zamanımızı gerçekten hevesli kişilere ayırıp onlara ne fazla faydayı sağlamayı istiyoruz.
+          </p>
+        </div>
+        <li class="list-group-item faq-item" for="item3">Sadece üniversite öğrencileri mi katılabilir?</li>
+        <div class="faq-detail" id="item3">
+          <p>Evet, aynı zamanda üniversite (4 yıllık ya da 2 yıllık) öğrencisi olduğunuzu da ispatlamanız gerekiyor. Bizim önerimiz edu.tr uzantılı mail adresinizi girmeniz. </p>
+        </div>
+        <li class="list-group-item faq-item" for="item4">Ya öğrenci değilsem?</li>
+        <div class="faq-detail" id="item4">
+          <p>Eğer öğrenci değilseniz ilerideki aktivitelere katılabilirsiniz. Takipte kalın.</p>
+        </div>
+        <li class="list-group-item faq-item" for="item5">Ben lise öğrencisiyim ne yapmalıyım?</li>
+        <div class="faq-detail" id="item5">
+          <p>
+            Eğer edu.tr ile biten bir mail adresiniz yoksa ve öğrenciyseniz bu durumda bize kaydınızı yapıp bize twitter'dan ulaşabilirsiniz.
+          </p>
+          <p>
+            <a href="https://twitter.com/mertsusur">@MertSusur</a>
+          </p>
+          <p>
+            <a href="https://twitter.com/onurgil">@onurgil</a>
+          </p>
+        </div>
+        <li class="list-group-item faq-item" for="item6">Neler öğreneceğim?</li>
+        <div class="faq-detail" id="item6">
+          <p>Ethereum'un nasıl çalıştığını, akıllı kontrat deploy etmek için gerekenleri ve akıllı kontrat tasarımını öğreneceksiniz.</p>
+        </div>
+        <li class="list-group-item faq-item" for="item7">Paramı Ethereum'a mı yoksa Bitcoin'e mi yatırayım?</li>
+        <div class="faq-detail" id="item7">
+          <p>
+            <img src="/btc.gif"></img>
+          </p>
+        </div>
+      </ul>
+
+    </div>
+
+    <script src="lib/app.js"></script>
+    <footer class="footer">
+      <p>&copy; Eğitim candır.</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
