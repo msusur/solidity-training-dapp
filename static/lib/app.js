@@ -1,11 +1,58 @@
 $(function() {
-  var activeDude;
+  var activeDude,
+    isEthActive = typeof web3 !== 'undefined';
 
   $('.faq-item').click(function() {
-    if(activeDude) {
+    if (activeDude) {
       activeDude.hide();
     }
     var key = $(this).attr('for');
     activeDude = $('#' + key).toggle();
   });
+
+  var loadEthInformation = function(w3, address) {
+    w3.version.getNetwork(function(err, netId) {
+      // Get network id.
+      if (netId !== '4') {
+        $('#metamask-alert').text('Sadece Rinkeby ile bu siteyi kullanabilirsiniz!').show();
+        throw new Error('Not Rinkeby.');
+      }
+
+      // Get contract ABI.
+      $.get('/lib/contract-abi.json').then(function(abi) {
+
+        $('#btn').click(function() {
+          var email = $('#email').val();
+          var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+          if (!re.test(email)) {
+            return $('#metamask-alert').text('Email adresi gecersiz.').show();
+          }
+          contract.registerToEvent.call(email, { value: 3, gas: 3000000 }, function(error, result) {
+            alert('done!');
+          });
+        });
+
+        var contract = w3.eth.contract(abi).at(address);
+
+        var batch = w3.createBatch();
+        batch.add(contract.getTotalCount.call(function(error, result) {
+          $('#studentCount').text(result);
+        }));
+        batch.add(contract.getStudentLimit.call(function(error, result) {
+          $('#studentLimit').text(result);
+        }));
+        batch.add(contract.getDepositLimit.call(function(error, result) {
+          $('#depositLimit').text(result);
+        }));
+        batch.execute();
+      });
+    });
+  };
+
+  if (isEthActive) {
+    $('#metamask-alert').hide();
+    loadEthInformation(new Web3(web3.currentProvider), '0xbf882a14ef48d1ab38df3efc1080edd3e8552234');
+  } else {
+    $('.eth-info').remove();
+  }
 });

@@ -1,0 +1,22 @@
+{
+  "name": "solidity-training-contract",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "msusur <mail@mertsusur.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/msusur/solidity-training-contract",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "web3": "^0.19.0",
+    "bootstrap": "^3.3.7"
+  }
+}
