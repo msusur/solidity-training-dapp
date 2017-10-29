@@ -27,9 +27,22 @@ $(function() {
           if (!re.test(email)) {
             return $('#metamask-alert').text('Email adresi gecersiz.').show();
           }
-          contract.registerToEvent.call(email, { value: 3, gas: 3000000 }, function(error, result) {
-            alert('done!');
+          contract.StudentRegistered(function(error, result) {
+            if (error) {
+              return $('#metamask-alert').text('Bir hata olustu: ' + error).show();
+            }
+            $('#information-alert')
+              .html('Kaydiniz alindi.')
+              .show();
           });
+
+          contract.registerToEvent.sendTransaction(email, { value: w3.toWei(3, 'ether'), gas: 4700000, gasPrice: 80000000000 },
+            function(error, result) {
+              $('#information-alert')
+                .html('İşleminiz alındı. Detaylar için buraya tıklayın ' +
+                  '<a href="https://rinkeby.etherscan.io/tx/' + result + '">' + result + '</a>.')
+                .show();
+            });
         });
 
         var contract = w3.eth.contract(abi).at(address);
