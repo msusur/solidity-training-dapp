@@ -2,9 +2,8 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="/vendor/jquery/dist/jquery.js"></script>
   <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/narrow-jumbotron.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
   <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
@@ -22,13 +21,17 @@
       </nav>
       <h3 class="text-muted">Ethereum'a Giriş Eğitimi</h3>
     </div>
-
+    <div class="alert alert-danger" id="metamask-alert">
+      <strong>Dikkat!</strong> Formu çalıştırmak için Metamask kurulu olmalı! Ancak kurulu gibi görünmüyor.
+    </div>
     <div class="form">
       <div class="top">
         <i class="fa fa-cloud-upload fa-5x"></i>
         <p>Kayıt Formu</p>
       </div>
       <form>
+        <p class="eth-info"> Hesapta biriken toplam para <span id="balance">-1</span> ETH.</p>
+        <p class="eth-info"> Toplam <span id="studentCount">-1</span>/<span id="studentLimit">-1</span> öğrenci kayitli.</p>
         <input type="email" id="email" placeholder="adim@okulum.edu.tr" class="input" />
         <input type="button" id="btn" value="Kayıt Ol" class="input" />
       </form>
@@ -85,7 +88,7 @@
       </ul>
 
     </div>
-
+    <script src="/vendor/web3/dist/web3.js"></script>
     <script src="lib/app.js"></script>
     <footer class="footer">
       <p>&copy; Eğitim candır.</p>
