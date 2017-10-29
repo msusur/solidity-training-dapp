@@ -33,13 +33,13 @@ contract Training {
         owner = msg.sender;
         isActive = true;
 
-        if(_deposit != 0) {
+        if (_deposit != 0) {
             deposit = _deposit;
         } else {
             deposit = 5 ether;
         }
 
-        if(_studentLimit != 0) {
+        if (_studentLimit != 0) {
             studentLimit = _studentLimit;
         } else {
             studentLimit = 30;
@@ -70,6 +70,18 @@ contract Training {
 	    require(student.validated);
 	    return participationUrl;
 	}
+
+    function getTotalCount() public constant returns (uint) {
+        return registeredUserCount;
+    }
+
+    function getStudentLimit() public constant returns (uint) {
+        return studentLimit;
+    }
+
+    function getDepositLimit() public constant returns (uint256) {
+        return deposit;
+    }
 
 	/* Admin Functions */
 
