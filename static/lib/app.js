@@ -59,9 +59,12 @@ $(function() {
     });
   };
 
+  var contractAddress = '0x4dfb91dc32e46f85e14ffca9c6da371304e4874f';
+  $('#smartContract').attr('href', 'https://rinkeby.etherscan.io/address/' + contractAddress).text(contractAddress);
+
   if (isEthActive) {
     $('#metamask-alert').hide();
-    loadEthInformation(new Web3(web3.currentProvider), '0x4dfb91dc32e46f85e14ffca9c6da371304e4874f');
+    loadEthInformation(new Web3(web3.currentProvider), contractAddress);
   } else {
     $('.eth-info').remove();
   }
