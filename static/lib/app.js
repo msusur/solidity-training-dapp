@@ -1,7 +1,12 @@
 $(function() {
   var activeDude,
-    isEthActive = typeof web3 !== 'undefined';
+    isEthActive = typeof web3 !== 'undefined',
+    contractAddress = '0xaef70b0d7da2654b0f73285854d0e694b6a7d8bd';
 
+  // Set contract address on FAQ
+  $('#smartContract').attr('href', 'https://rinkeby.etherscan.io/address/' + contractAddress).text(contractAddress);
+
+  // FAQ items open/close
   $('.faq-item').click(function() {
     if (activeDude) {
       activeDude.hide();
@@ -11,8 +16,9 @@ $(function() {
   });
 
   var loadEthInformation = function(w3, address) {
+    // Check the network
     w3.version.getNetwork(function(err, netId) {
-      // Get network id.
+      // Get network id
       if (netId !== '4') {
         $('#metamask-alert').text('Sadece Rinkeby ile bu siteyi kullanabilirsiniz!').show();
         throw new Error('Not Rinkeby.');
@@ -21,6 +27,7 @@ $(function() {
       // Get contract ABI.
       $.get('/lib/contract-abi.json').then(function(abi) {
 
+        // Registration button
         $('#btn').click(function() {
           var email = $('#email').val();
           var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -32,7 +39,7 @@ $(function() {
               return $('#metamask-alert').text('Bir hata olustu: ' + error).show();
             }
             $('#information-alert')
-              .html('Kaydiniz alindi.')
+              .html('Kayıt işleminiz tamamlandı. Bizden haber bekleyin!')
               .show();
           });
 
@@ -59,8 +66,6 @@ $(function() {
     });
   };
 
-  var contractAddress = '0x4dfb91dc32e46f85e14ffca9c6da371304e4874f';
-  $('#smartContract').attr('href', 'https://rinkeby.etherscan.io/address/' + contractAddress).text(contractAddress);
 
   if (isEthActive) {
     $('#metamask-alert').hide();

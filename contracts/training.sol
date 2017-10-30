@@ -14,6 +14,7 @@ contract Training {
         string email;
         bool validated;
         address addr;
+        bool deleted;
     }
 
     event StudentRegistered(address addr, string email);
@@ -46,14 +47,14 @@ contract Training {
         require(registeredUserCount < studentLimit);
 
         registeredUserCount++;
-        students[msg.sender] = Student(email, false, msg.sender);
+        students[msg.sender] = Student(email, false, msg.sender, false);
         studentsIndex[registeredUserCount] = msg.sender;
 
         StudentRegistered(msg.sender, email);
     }
 
     function isRegistered(address _addr) public constant returns (bool) {
-		return students[_addr].addr != address(0);
+		return students[_addr].addr != address(0) && !students[_addr].deleted;
 	}
 
 	function getMeParticipationUrl() public constant returns (string) {
@@ -79,6 +80,13 @@ contract Training {
 	    return (idx, student.email);
 	}
 
+    function deleteStudent(uint idx) public onlyOwner {
+        address studentAddr = studentsIndex[idx];
+        Student storage student = students[studentAddr];
+        student.deleted = true;
+        registeredUserCount--;
+    }
+
 	function validateStudentStatus(uint idx, bool isValidated) public onlyOwner {
 	    address studentAddr = studentsIndex[idx];
 	    Student storage student = students[studentAddr];
@@ -92,4 +100,8 @@ contract Training {
 	function closeParticipation() public onlyOwner {
 	    isActive = false;
 	}
+
+    function openParticipation() public onlyOwner {
+        isActive = true;
+    }
 }
