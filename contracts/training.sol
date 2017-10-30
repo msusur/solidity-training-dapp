@@ -4,7 +4,6 @@ contract Training {
 
     address owner;
     string participationUrl;
-    uint256 deposit;
     uint studentLimit;
     uint registeredUserCount;
     bool isActive;
@@ -29,15 +28,9 @@ contract Training {
         _;
     }
 
-    function Training(uint256 _deposit, uint _studentLimit) public {
+    function Training(uint _studentLimit) public {
         owner = msg.sender;
         isActive = true;
-
-        if (_deposit != 0) {
-            deposit = _deposit;
-        } else {
-            deposit = 5 ether;
-        }
 
         if (_studentLimit != 0) {
             studentLimit = _studentLimit;
@@ -48,8 +41,7 @@ contract Training {
 
     /* Student Functions */
 
-    function registerToEvent(string email) payable onlyActive public {
-        require(msg.value == deposit);
+    function registerToEvent(string email) onlyActive public {
         require(!isRegistered(msg.sender));
         require(registeredUserCount < studentLimit);
 
@@ -77,10 +69,6 @@ contract Training {
 
     function getStudentLimit() public constant returns (uint) {
         return studentLimit;
-    }
-
-    function getDepositLimit() public constant returns (uint256) {
-        return deposit;
     }
 
 	/* Admin Functions */

@@ -36,7 +36,7 @@ $(function() {
               .show();
           });
 
-          contract.registerToEvent.sendTransaction(email, { value: w3.toWei(3, 'ether'), gas: 4700000, gasPrice: 80000000000 },
+          contract.registerToEvent.sendTransaction(email, { gas: 4700000, gasPrice: 80000000000 },
             function(error, result) {
               $('#information-alert')
                 .html('İşleminiz alındı. Detaylar için buraya tıklayın ' +
@@ -54,9 +54,6 @@ $(function() {
         batch.add(contract.getStudentLimit.call(function(error, result) {
           $('#studentLimit').text(result);
         }));
-        batch.add(contract.getDepositLimit.call(function(error, result) {
-          $('#depositLimit').text(result);
-        }));
         batch.execute();
       });
     });
@@ -64,7 +61,7 @@ $(function() {
 
   if (isEthActive) {
     $('#metamask-alert').hide();
-    loadEthInformation(new Web3(web3.currentProvider), '0xbf882a14ef48d1ab38df3efc1080edd3e8552234');
+    loadEthInformation(new Web3(web3.currentProvider), '0x4dfb91dc32e46f85e14ffca9c6da371304e4874f');
   } else {
     $('.eth-info').remove();
   }
