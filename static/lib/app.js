@@ -40,7 +40,7 @@ $(function() {
             function(error, result) {
               $('#information-alert')
                 .html('İşleminiz alındı. Detaylar için buraya tıklayın ' +
-                  '<a href="https://rinkeby.etherscan.io/tx/' + result + '">' + result + '</a>.')
+                  '<a href="https://rinkeby.etherscan.io/tx/' + result + '" target="_blank">' + result + '</a>.')
                 .show();
             });
         });
