@@ -1,5 +1,4 @@
 # Ethereum Eğitim Kayıt Uygulaması
-
 Bu uygulama ile, Ethereum eğitimimize katılacak olan lise ve üniversite öğrencilerini kayıt altına almayı ve biraz da sadece gerçekten Blockchain ve Ethereum'a ilgisi olanları ayırt etmeyi hedefliyoruz.
 
 `Ethereum Eğitim Kayıt Uygulaması` ile, bir Dapp uygulamasının nasıl kullanıldığını deneyimlemiş ve öğrenmiş olacaksınız.  Bu sebeple kayıt işlemine geçmeden önce bu dökümanı okumanız gerekmektedir.
@@ -9,7 +8,6 @@ Yapmanız gerekenler gerçekten çok basit. Hiç merak etmeyin, bir problemle ka
 Kolları sıvadıysak başlayabiliriz.
 
 ## Nasıl kayıt olurum?
-
 Yapılması gereken ilk şey [Metamask](https://metamask.io/)'ı Chrome'unuza kurmak. Metamask basitçe, Dapp ile Ethereum cüzdanınız arasında köprü görevi gören bir Chrome Extension'udur. Bizim örneğimizde Dapp, bu repository'de gördüğünüz ve sizin için hazırladığımız kayıt formu uygulamasıdır.
 
 Extension'u indirdikten sonra bir şifre belirleyip Metamask'ı kullanmaya başlayabilirsiniz. Kayıt uygulamamız Rinkeby ağında çalıştığı için extension'un sol üstünden Rinkeby ağına geçmeniz gerekmektedir. Geçiş yaptığınızda `Àccount 1` adında bir hesabın yaratılmış olduğunu göreceksiniz.
