@@ -1,4 +1,5 @@
 # Ethereum Eğitim Kayıt Uygulaması
+
 Bu uygulama ile, Ethereum eğitimimize katılacak olan lise ve üniversite öğrencilerini kayıt altına almayı ve biraz da sadece gerçekten Blockchain ve Ethereum'a ilgisi olanları ayırt etmeyi hedefliyoruz.
 
 `Ethereum Eğitim Kayıt Uygulaması` ile, bir Dapp uygulamasının nasıl kullanıldığını deneyimlemiş ve öğrenmiş olacaksınız.  Bu sebeple kayıt işlemine geçmeden önce bu dökümanı okumanız gerekmektedir.
@@ -8,6 +9,7 @@ Yapmanız gerekenler gerçekten çok basit. Hiç merak etmeyin, bir problemle ka
 Kolları sıvadıysak başlayabiliriz.
 
 ## Nasıl kayıt olurum?
+
 Yapılması gereken ilk şey [Metamask](https://metamask.io/)'ı Chrome'unuza kurmak. Metamask basitçe, Dapp ile Ethereum cüzdanınız arasında köprü görevi gören bir Chrome Extension'udur. Bizim örneğimizde Dapp, bu repository'de gördüğünüz ve sizin için hazırladığımız kayıt formu uygulamasıdır.
 
 Extension'u indirdikten sonra bir şifre belirleyip Metamask'ı kullanmaya başlayabilirsiniz. Kayıt uygulamamız Rinkeby ağında çalıştığı için extension'un sol üstünden Rinkeby ağına geçmeniz gerekmektedir. Geçiş yaptığınızda `Àccount 1` adında bir hesabın yaratılmış olduğunu göreceksiniz.
@@ -37,6 +39,7 @@ Bundan sonrasında ise, yazdığınız e-mail adresinize bir onay e-mail'i gelec
 > Bir adres ile sadece bir kayıt işlemi yapabilirsiniz.
  
 ## Ne yaptım ben şimdi?
+
 Kayıt oldunuz! Ve daha da önemlisi bir Dapp uygulaması kullanırken, mevcutta genel kabul görmüş olan yöntemi (Metamask) uyguladınız. Bu sayede Ethereum private key'inizi veya şifrenizi paylaşmadan transaction gerçekleştirdiniz!
  
 ## Daha fazla istiyorum, daha fazla!
@@ -45,6 +48,15 @@ Kayıt oldunuz! Ve daha da önemlisi bir Dapp uygulaması kullanırken, mevcutta
 
 Ama kafa karışıklığına neden olmamak adına daha fazla detay vermiyoruz. Eğitimde bu konuların üzerinden zaten geçeceğiz. 
 
+## Eğitimdeki konu başlıkları
+
+    Basics of a contract (How to use Remix)
+    Metamask ve Rinkeby
+    Contract Deployment
+
+## Daha da fazlasını öğrenmek için ne yapmalıyım?
+
+Eğitimde bunlardan da bahsedeceğiz ama öncesinde paylaşmak istediğimiz bir şey var. O da eğitim tamamlandığında aranızdan bazı kişilere, mevcutta devam eden Ethereum projemize katılma davetinde bulunacağız. Codefiction ekibi ile birlikte tüm toplantılara katılacak, proje geliştirme ve karar süreçlerinde yer alacaksınız. 
 
 ## Ben de kullanabilir miyim bu uygulamayı?
 
@@ -55,19 +67,6 @@ Tabi ki şunları çalıştırmayı unutmayın:
 npm install
 npm prestart
 ```
-
-
-## Eğitimdeki konu başlıkları
-
-    Basics of a contract (How to use Remix)
-    Metamask ve Rinkeby
-    Contract Deployment
-
-
-## Daha da fazlasını öğrenmek için ne yapmalıyım?
-
-Eğitimde bunlardan da bahsedeceğiz ama öncesinde paylaşmak istediğimiz bir şey var. O da eğitim tamamlandığında aranızdan bazı kişilere, mevcutta devam eden Ethereum projemize katılma davetinde bulunacağız. Codefiction ekibi ile birlikte tüm toplantılara katılacak, proje geliştirme ve karar süreçlerinde yer alacaksınız. 
-
 
 ## Son
 
