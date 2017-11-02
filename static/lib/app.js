@@ -47,7 +47,7 @@ $(function() {
             function(error, result) {
               $('#information-alert')
                 .html('İşleminiz alındı. Detaylar için buraya tıklayın ' +
-                  '<a href="https://rinkeby.etherscan.io/tx/' + result + '" target="_blank">' + result + '</a>.')
+                  '<a href="https://rinkeby.etherscan.io/tx/' + result + '" target="_blank">' + result + '</a>. <br/>Eğer transaction başarılı görünüyorsa kaydınız alınmıştır. Lütfen mail beklemeyin.')
                 .show();
             });
         });
