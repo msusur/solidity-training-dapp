@@ -44,15 +44,15 @@ Kayıt oldunuz! Ve daha da önemlisi bir Dapp uygulaması kullanırken, mevcutta
  
 ## Daha fazla istiyorum, daha fazla!
 
-Öncelikle `contracts` klasörü altında, kayıt ol işleminde çalışan `Smart Contract`'ı görebilirsiniz. İsmi `training.sol`. Kayıt olduğunuzda `contract` üzerinde tutulan bilgileriniz sadece bizim tarafımızdan (owner) görüntülenebilirç
+Öncelikle `contracts` klasörü altında, kayıt ol işleminde çalışan `Smart Contract`'ı görebilirsiniz. İsmi `training.sol`. Kayıt olduğunuzda `contract` üzerinde tutulan bilgileriniz sadece bizim tarafımızdan (owner) görüntülenebilir.
 
 Ama kafa karışıklığına neden olmamak adına daha fazla detay vermiyoruz. Eğitimde bu konuların üzerinden zaten geçeceğiz. 
 
 ## Eğitimdeki konu başlıkları
 
-    Basics of a contract (How to use Remix)
+    Smart contract temelleri (Remix nasıl kullanılır)
     Metamask ve Rinkeby
-    Contract Deployment
+    Smart contract deployment
 
 ## Daha da fazlasını öğrenmek için ne yapmalıyım?
 
