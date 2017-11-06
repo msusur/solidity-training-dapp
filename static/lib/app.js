@@ -1,6 +1,7 @@
 $(function() {
   var activeDude,
     isEthActive = typeof web3 !== 'undefined',
+    studentCount = 0,
     contractAddress = '0xaef70b0d7da2654b0f73285854d0e694b6a7d8bd';
 
   // Set contract address on FAQ
@@ -52,6 +53,25 @@ $(function() {
             });
         });
 
+        $('#adminButton').click(function() {
+          var queue = w3.createBatch();
+          // admin button to list the students.
+          for (var idx = 0; idx < studentCount; idx += 1) {
+            queue.add(function(id) {
+              return contract.getStudent.call(id, function(error, result) {
+                if (error) {
+                  return console.log('Yok canim daha neler...');
+                }
+                if (result[1]) {
+                  $('.super-secret-admin-stuff').show().append('<p>' + id + '.' + result[1] + '</p>');
+                }
+              });
+            }(idx));
+          }
+
+          queue.execute();
+
+        });
         var contract = w3.eth.contract(abi).at(address);
 
         var batch = w3.createBatch();
@@ -59,7 +79,8 @@ $(function() {
           $('#studentCount').text(result);
         }));
         batch.add(contract.getStudentLimit.call(function(error, result) {
-          $('#studentLimit').text(result);
+          studentCount = result.c;
+          $('#studentLimit').text(studentCount);
         }));
         batch.execute();
       });
