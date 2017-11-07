@@ -26,7 +26,7 @@ Rinkeby, Robsten gibi ortamlar tamamen test ortamları oldukları için ve aslen
 
 Sonrasında bu postumuzun linkini alıp faucet'e yapıştırıyoruz ve sağ taraftaki `Give me Ether`'den istediğimizi seçiyoruz. Birkaç saniye sonrasında Metamask'tan aldığımız adresimizi https://rinkeby.etherscan.io adresinde aratıp, bakiyemizi görebiliriz. Şimdi Rinkeby ağına e-mail adresimizi yazdırmak için gerekli olan `Transaction fee`'yi karşılayabiliriz.
 
-Her şey hazır görünüyor. Şimdi [kayıt uygulamamıza](https://solidity.herokuapp.com/) girebiliriz. Hala kontenjan varsa okul e-mail adresinizi doğru bir şekilde yazalım ve `KAYIT OL` butonuna tıklayalım. Karşınıza şu şekilde bir ekran gelecek:
+Her şey hazır görünüyor. Şimdi [kayıt uygulamamıza](https://solidity.herokuapp.com/) girebiliriz. Hala kontenjan varsa okul e-mail adresinizi doğru bir şekilde yazalım ve `KAYIT OL` butonuna tıklayalım. (Kayıt sistemimizin, Metamask'ta Rinkeby ağı seçili durumdayken çalıştığını tekrar hatırlatalım.) Sonrasında, karşınıza şu şekilde bir ekran gelecek:
 
 ![Onay ekranı](http://oi66.tinypic.com/8y7wp4.jpg)
 
