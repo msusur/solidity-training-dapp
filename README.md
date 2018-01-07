@@ -50,6 +50,8 @@ Ama kafa karışıklığına neden olmamak adına daha fazla detay vermiyoruz. E
 
 ## Eğitimdeki konu başlıkları
 
+    Yazilimin temelleri
+    Blockchain Temelleri
     Smart contract temelleri (Remix nasıl kullanılır)
     Metamask ve Rinkeby
     Smart contract deployment
@@ -73,4 +75,3 @@ npm prestart
 Herhangi bir sorunuz olursa bize ulaşmak konusunda çekinmeyin lütfen. Görüşmek üzere!
 
 * [Mert Susur](https://www.twitter.com/mertsusur)
-* [Onur Aykaç](https://www.twitter.com/onurgil)
