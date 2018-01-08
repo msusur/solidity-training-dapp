@@ -4,7 +4,7 @@ Bu uygulama ile, Ethereum eğitimimize katılacak olan lise ve üniversite öğr
 
 `Ethereum Eğitim Kayıt Uygulaması` ile, bir Dapp uygulamasının nasıl kullanıldığını deneyimlemiş ve öğrenmiş olacaksınız.  Bu sebeple kayıt işlemine geçmeden önce bu dökümanı okumanız gerekmektedir.
 
-Yapmanız gerekenler gerçekten çok basit. Hiç merak etmeyin, bir problemle karşılaşırsanız [Mert Susur](https://www.twitter.com/mertsusur)'a ya da [Onur Aykaç](https://www.twitter.com/onurgil)'a ulaşıp destek isteyebilirsiniz.
+Yapmanız gerekenler gerçekten çok basit. Hiç merak etmeyin, bir problemle karşılaşırsanız [Mert Susur](https://www.twitter.com/mertsusur)'a ulaşıp destek isteyebilirsiniz.
 
 Kolları sıvadıysak başlayabiliriz.
 
@@ -26,13 +26,13 @@ Rinkeby, Robsten gibi ortamlar tamamen test ortamları oldukları için ve aslen
 
 Sonrasında bu postumuzun linkini alıp faucet'e yapıştırıyoruz ve sağ taraftaki `Give me Ether`'den istediğimizi seçiyoruz. Birkaç saniye sonrasında Metamask'tan aldığımız adresimizi https://rinkeby.etherscan.io adresinde aratıp, bakiyemizi görebiliriz. Şimdi Rinkeby ağına e-mail adresimizi yazdırmak için gerekli olan `Transaction fee`'yi karşılayabiliriz.
 
-Her şey hazır görünüyor. Şimdi [kayıt uygulamamıza](https://solidity.herokuapp.com/) girebiliriz. Hala kontenjan varsa okul e-mail adresinizi doğru bir şekilde yazalım ve `KAYIT OL` butonuna tıklayalım. (Kayıt sistemimizin, Metamask'ta Rinkeby ağı seçili durumdayken çalıştığını tekrar hatırlatalım.) Sonrasında, karşınıza şu şekilde bir ekran gelecek:
+Her şey hazır görünüyor. Şimdi [kayıt uygulamamıza](https://solidity.herokuapp.com/) girebiliriz. Hala kontenjan varsa e-mail adresinizi doğru bir şekilde yazalım ve `KAYIT OL` butonuna tıklayalım. (Kayıt sistemimizin, Metamask'ta Rinkeby ağı seçili durumdayken çalıştığını tekrar hatırlatalım.) Sonrasında, karşınıza şu şekilde bir ekran gelecek:
 
 ![Onay ekranı](http://oi66.tinypic.com/8y7wp4.jpg)
 
 Şimdi `Submit` butonuna tıklayıp Rinkeby network'ünde yeni bir transaction yaratılmasını sağlayabilirsiniz.
 
-Bundan sonrasında ise, yazdığınız e-mail adresinize bir onay e-mail'i gelecek. Buna tıklayarak kayıt işlemini sonlandırabileceksiniz.
+Bundan sonrasında ise, kontenjan doldugunda sizlere bir mail gonderecegiz ve bu mail'de nasil katilacaginizin detaylarini bulabileceksiniz.
 
 > Onay mail'inin gelmesi biraz vakit alabilir. Şu an biz de kestiremiyoruz ama baktınız beş günü-on günü geçiyor onay mail'inin gelmesi, yine bizimle iletişime geçin lütfen.
 
