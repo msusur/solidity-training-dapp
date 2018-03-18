@@ -74,10 +74,10 @@ contract Training {
 
 	/* Admin Functions */
 
-	function getStudent(uint idx) public constant onlyOwner returns (uint index, string email) {
+	function getStudent(uint idx) public constant onlyOwner returns (uint index, string email, address addr) {
 	    address studentAddr = studentsIndex[idx];
 	    Student storage student = students[studentAddr];
-	    return (idx, student.email);
+	    return (idx, student.email, student.addr);
 	}
 
     function deleteStudent(uint idx) public onlyOwner {

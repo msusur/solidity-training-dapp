@@ -2,7 +2,7 @@ $(function() {
   var activeDude,
     isEthActive = typeof web3 !== 'undefined',
     studentCount = 0,
-    contractAddress = '0xC673F53493e0c21eF25B738f009945D8a12621C0';
+    contractAddress = '0xC4C0e5Ea64Bd2172ACD901500aecA7B2DB0F6f85';
 
   // Set contract address on FAQ
   $('#smartContract').attr('href', 'https://rinkeby.etherscan.io/address/' + contractAddress).text(contractAddress);
