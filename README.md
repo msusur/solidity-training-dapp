@@ -56,10 +56,6 @@ Ama kafa karışıklığına neden olmamak adına daha fazla detay vermiyoruz. E
     Metamask ve Rinkeby
     Smart contract deployment
 
-## Daha da fazlasını öğrenmek için ne yapmalıyım?
-
-Eğitimde bunlardan da bahsedeceğiz ama öncesinde paylaşmak istediğimiz bir şey var. O da eğitim tamamlandığında aranızdan bazı kişilere, mevcutta devam eden Ethereum projemize katılma davetinde bulunacağız. Codefiction ekibi ile birlikte tüm toplantılara katılacak, proje geliştirme ve karar süreçlerinde yer alacaksınız. 
-
 ## Ben de kullanabilir miyim bu uygulamayı?
 
 Tabi ki! Basic Smart Contract ve Ethereum bilginiz varsa çok kolay bir şekilde uygulamayı kendiniz için çalıştırabilirsiniz. Öncelikle contract'ı kendi cüzdan adresiniz ile deploy edin ve owner olun, sonrasında uygulamayı indirip `./static/lib/app.js` dosyasındaki contractAddress alanını, kendi yarattığınız contract'ın adresi ile değiştirin ve uygulamayı deploy edin. İşte bu kadar.
