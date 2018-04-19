@@ -71,3 +71,10 @@ npm prestart
 Herhangi bir sorunuz olursa bize ulaşmak konusunda çekinmeyin lütfen. Görüşmek üzere!
 
 * [Mert Susur](https://www.twitter.com/mertsusur)
+
+## Destek olanlar
+* [Mert Susur](https://www.twitter.com/mertsusur)
+* [Onur Aykaç](https://github.com/onuar)
+* [Tarık Yurtlu](https://github.com/tarikyurtlu)
+* [Emir Ercan Ayar](https://github.com/eercanayar)
+
